@@ -21,6 +21,11 @@ on:
         required: false
         type: string
         default: '.'
+      build-args:
+        required: false
+        type: string
+        default: ''
+        
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,3 +61,5 @@ jobs:
           push: true
           tags: ${{ steps.docker_metadata.outputs.tags }}
           labels: ${{ steps.docker_metadata.outputs.labels }}
+          build-args: |
+            ${{ inputs.build-args }}
