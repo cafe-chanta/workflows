@@ -1,7 +1,7 @@
 name: Docker Build
 
 on:
-  workflow_call:
+  workflow_dispatch:
     outputs:
       image_name:
         description: "Docker image name built"
