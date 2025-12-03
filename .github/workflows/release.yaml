@@ -7,6 +7,6 @@ on:
 
 jobs:
   release:
-    uses: cafe-chanta/workflows/.github/workflows/semantic_release.yaml@master
+    uses: cafe-chanta/workflows/.github/workflows/semantic_release.yaml@main
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
