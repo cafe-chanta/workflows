@@ -1,10 +1,12 @@
 name: Release
 
 on:
-  workflow_dispatch:
+  push:
+    branches: 
+      - main
 
 jobs:
   release:
-    uses: ./.github/workflows/semantic_release.yml@master
+    uses: cafe-chanta/workflows/.github/workflows/semantic_release.yml@master
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
