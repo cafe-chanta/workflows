@@ -37,8 +37,8 @@ jobs:
         with:
           images: ${{ inputs.image }}
           tags: |
-            type=raw,value=${{ inputs.tags }}
-            type=suffix,value=${{ inputs.tag_suffixes }}
+            type=raw,enable=true,value=${{ inputs.tags }}
+            type=raw,enable=true,suffix=${{ inputs.tag_suffixes }},value=${{ inputs.tags }}
           flavor: latest=false
 
       - name: Build and push Docker image
