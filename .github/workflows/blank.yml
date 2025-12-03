@@ -38,7 +38,7 @@ jobs:
           images: ${{ inputs.image }}
           tags: |
             type=raw,enable=true,value=${{ inputs.tags }}
-            ${{ inputs.tags != '' &&  'type=raw,enable=true,suffix=' inputs.tag_suffixes',value=inputs.tags' }}
+            ${{ inputs.tags != '' &&  ('type=raw,enable=true,suffix='inputs.tag_suffixes','value='inputs.tags)}}
           flavor: latest=false
           
       - name: Log in to the Container registry
