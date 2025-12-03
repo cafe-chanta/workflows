@@ -2,17 +2,6 @@ name: Docker Build
 
 on:
   workflow_dispatch:
-    outputs:
-      image_name:
-        description: "Docker image name built"
-        value: ${{ jobs.build.outputs.image_name }}
-      tags:
-        description: "All Docker tags built"
-        value: ${{ jobs.build.outputs.tags }}
-      digest:
-        description: "Docker image SHA256 digest"
-        value: ${{ jobs.build.outputs.digest }}
-
     inputs:
       image:
         required: true
