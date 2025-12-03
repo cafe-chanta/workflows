@@ -1,6 +1,8 @@
 # Use a minimal base image suitable for fast CI/CD builds.
 FROM alpine:latest
-
+ARG A
+ARG B
+RUN echo $A $B
 # Set an argument. This is often used in pipelines to pass version numbers,
 # and it helps verify that the build environment can handle ARGs.
 ARG BUILD_VERSION=1.0.0
