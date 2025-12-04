@@ -11,12 +11,7 @@
     ],
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/github",
-      {
-        "successComment": false,
-        "failComment": false,
-        "assets": []
-      }
+      "@semantic-release/github"
     ],
     [
       "@semantic-release/changelog",
