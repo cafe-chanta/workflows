@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    if: ${{ github.ref == "abc" }}
     uses: ./.github/workflows/blank.yml
     with:
       image: "ghcr.io/cafe-chanta"
@@ -14,6 +15,7 @@ jobs:
         A=sabri
         B=yassmine
   build2:
+    needs: [build]
     uses: ./.github/workflows/blank.yml
     with:
       image: "ghcr.io/cafe-chanta"
