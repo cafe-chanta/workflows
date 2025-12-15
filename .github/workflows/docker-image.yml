@@ -13,4 +13,12 @@ jobs:
       build-args: |
         A=sabri
         B=yassmine
-      
+  build2:
+    uses: ./.github/workflows/blank.yml
+    with:
+      image: "ghcr.io/cafe-chanta"
+      tags: "develop"
+      tag_suffixes: "-123"
+      build-args: |
+        A=sabri
+        B=yassmine
