@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    if: github.ref == "abc" 
+    if: github.ref == abc
     uses: ./.github/workflows/blank.yml
     with:
       image: "ghcr.io/cafe-chanta"
