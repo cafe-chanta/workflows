@@ -15,6 +15,7 @@ jobs:
         A=sabri
         B=yassmine
   build2:
+    if: always() && needs.build.result == 'success'
     needs: [build]
     uses: ./.github/workflows/blank.yml
     with:
